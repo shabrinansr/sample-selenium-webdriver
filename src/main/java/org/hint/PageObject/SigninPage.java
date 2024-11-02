@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import static org.testng.AssertJUnit.assertTrue;
 
-public class SignInPage extends BasePage {
+public class SigninPage extends BasePage {
 
     // Constructor to initialize the page elements
-    public SignInPage(WebDriver driver) {
+    public SigninPage(WebDriver driver) {
         super(driver);
     }
 
@@ -28,7 +28,7 @@ public class SignInPage extends BasePage {
     @FindBy(xpath = "(//button[normalize-space()='Login'])[1]")  // Update with the actual ID
     private WebElement signInButton;
 
-    @FindBy(className = "(//button[@class='btn btn-icon-login'])[1]")  // Update with the actual ID
+    @FindBy(xpath = "(//button[@class='btn btn-icon-login'])[1]")  // Update with the actual ID
     private WebElement profileLoginIcon;
 
     // Step definitions for Gherkin steps

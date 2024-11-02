@@ -75,4 +75,9 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT));
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
+    // Fungsi forLoading untuk menunggu elemen loading hilang
+    public void forLoading(WebElement loadingElement) {
+        wait.until(ExpectedConditions.invisibilityOf(loadingElement));
+    }
 }
